@@ -6,6 +6,7 @@ Here, we provide the source code and experimental sequencing data.
 ## Dataset
 We performed Illumina NGS sequencing (MiSeq) with cycles 151-6-151 (R1-index-R2).  
 Based on MiSeq [configurations](https://support.illumina.com/downloads/miseq-product-documentation.html), we obtain some raw sequencing data to get NPF (non-pass chastity filter) reads: cif, filter, and locs files.    
+The provided data include all sequening reads: PF (pass filter), NPF, and reads with an invalid index. 
 
 ### Raw data
 - *.cif (./dataset/raw/cif/)
