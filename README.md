@@ -1,39 +1,42 @@
 # Sequence analysis and decoding with extra low-quality reads for DNA data storage
-This repository is for the study **"Sequence analysis and decoding with extra low-quality reads for DNA data storage"** which submitted to _Bioinformatics_ in 2024.  
+This repository is for the study **"Sequence analysis and decoding with extra low-quality reads for DNA data storage"** which submitted to **_Bioinformatics_** in 2024.  
 Here, we provide the source code and experimental sequencing data.  
 (Current version was revised in Nov. 3, 2024)  
 
 ## Dataset
 We performed Illumina NGS sequencing (MiSeq) with cycles 151-6-151 (R1-index-R2).  
-Based on MiSeq [configurations](https://support.illumina.com/downloads/miseq-product-documentation.html), we obtain some raw sequencing data to get NPF (non-pass chastity filter) reads.   
-We 
+Based on MiSeq [configurations](https://support.illumina.com/downloads/miseq-product-documentation.html), we obtain some raw sequencing data to get NPF (non-pass chastity filter) reads: cif, filter, and locs files.    
 
-### Raw data (./dataset/raw/)
-- *.cif
-- *.filter
-- *.locs
+### Raw data
+- *.cif (./dataset/raw/cif/)
+- *.filter (./dataset/raw/filter/)
+- *.locs (./dataset/raw/locs/)
   
-  [raw_format](./img/raw_format.png)
+  ![raw_format](./img/raw_format.png)
 
-### FASTQ (./dataset/fastq/)
-- AYB-basecalled FASTQ
-- Illumina-basecalled FASTQ
+### FASTQ 
+- AYB-basecalled FASTQ (./dataset/fastq/AYB_fastq/)
+- Illumina-basecalled FASTQ (./dataset/fastq/Illumina_fastq/)
 
-## Sequence analysis and decoding
+## Sequence analysis and decoding (To be updated...)
+<!-- Proposed sequence analysis workflow is as shown in below figure. 
+![workflow](./img/workflow.png)-->
+**To be updated**
+
 ### Requirements
-#### Language
-- Python
-- Matlab
+#### Languages
+- Python  
+- Matlab  
+- C  
 
-#### Used open-source software
+#### Open-source Software (needs installation)
+##### Used in workflow
 - Edit distance based-clustering **[Starcode](https://github.com/gui11aume/starcode)**
-- Paired-end read merging **[PEAR](https://github.com/tseemann/PEAR)**
-- Sequence alignment **[MUSCLE](https://github.com/rcedgar/muscle)**
+- Sequence alignment **[MUSCLE](https://github.com/rcedgar/muscle)** (version 5.0.1428)
+- Paired-end read merging **[PEAR](https://github.com/tseemann/PEAR)** (version 0.9.11)
 
 ### Run
-- The run files for Erlich-PF, Erlich-ExtraNPF, Prop-ExtraNPF are in `src/'.  
-- The generated results are saved in 'result/'.  
-- 
+**To be updated**
 
 ## Contact
 E-mail: wldus8677@gmail.com  
