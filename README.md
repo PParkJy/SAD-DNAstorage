@@ -20,9 +20,9 @@ The provided data include all sequening reads: PF (pass filter), NPF, and reads 
 - Illumina-basecalled FASTQ (./dataset/fastq/Illumina_fastq/)
 
 ## Sequence analysis and decoding (To be updated...)
-<!-- Proposed sequence analysis workflow is as shown in below figure. 
-![workflow](./img/workflow.png)-->
-**To be updated**
+Our sequence analysis workflow is shown in below figure.  
+
+  ![workflow](./img/workflow.png)
 
 ### Requirements
 #### Languages
@@ -30,14 +30,14 @@ The provided data include all sequening reads: PF (pass filter), NPF, and reads 
 - Matlab  
 - C  
 
-#### Open-source Software (needs installation)
-##### Used in workflow
+#### Open-source Software (used in proposed workflow and decoding)
 - Edit distance based-clustering **[Starcode](https://github.com/gui11aume/starcode)**
 - Sequence alignment **[MUSCLE](https://github.com/rcedgar/muscle)** (version 5.0.1428)
 - Paired-end read merging **[PEAR](https://github.com/tseemann/PEAR)** (version 0.9.11)
 
 ### Run
-**To be updated**
+
+
 
 ## Contact
 E-mail: wldus8677@gmail.com  
