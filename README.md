@@ -26,9 +26,9 @@ The provided FASTQ include all sequening reads: PF (pass filter), NPF, and reads
 - Illumina-basecalled FASTQ (./dataset/fastq/Illumina_fastq/)
 
 ## Sequence analysis and decoding (To be updated...)
-Our sequence analysis workflow is shown in below figure.  
+<!-- Our sequence analysis workflow is shown in below figure.  
 
-  ![workflow](./img/workflow.png)
+![workflow](./img/workflow.png) -->
 
 ### Requirements
 #### Languages
