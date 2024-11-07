@@ -10,44 +10,45 @@ We use pass filter (PF) reads and non-pass filter (NPF) reads of Illumina NGS se
 
 NPF reads are not provided as FASTQ files in Illumina NGS sequencing.  
 Therefore, we obtained raw sequencing data from Illumina sequencer and performed base-calling on NPF reads from the raw data.  
-The detailed sequencing informations are described in "supplementary.docx".  
+
+The detailed Illumina sequencing settings are described in [supplementary.docx](https://github.com/PParkJy/SAD-DNAstorage/blob/main/supplementary.docx) and the sequencing cycle is 151-6-151 (R1-index-R2).   
 Based on MiSeq [configurations](https://support.illumina.com/downloads/miseq-product-documentation.html), we obtained the following raw sequencing data: cif, filter, and locs files.    
 
-### Raw data
-- *.cif (./dataset/raw/cif/)
-- *.filter (./dataset/raw/filter/)
-- *.locs (./dataset/raw/locs/)
-  
+### Raw data (binary file)  
+- *.cif (./dataset/raw/cif/): contains RTA image analysis results for one cycle and one tile.
+- *.filter (./dataset/raw/filter/): contains chastity filter results for one tile.
+- *.locs (./dataset/raw/locs/): contains cluster coordinates for one file.   
+
   ![raw_format](./img/raw_format.png)
 
 ### FASTQ 
-The provided FASTQ include all sequening reads: PF (pass filter), NPF, and reads with an invalid index.   
-- AYB-basecalled FASTQ (./dataset/fastq/AYB_fastq/)
-- Illumina-basecalled FASTQ (./dataset/fastq/Illumina_fastq/)
+We conducted base-calling to generate FASTQ files from cif data using [AYB](https://github.com/timmassingham/AYB2/) with default options.   
+Since the raw data includes not only PF and NPF reads but reads with a invalid index, we classified the reads using the FASTQ files produced by Illumina sequencing.  
+The detailed method is described in README of "./dataset/".
 
-## Sequence analysis and decoding (To be updated...)
-<!-- Our sequence analysis workflow is shown in below figure.  
+- AYB-basecalled FASTQ (./dataset/AYB_fastq/)
+- Illumina-basecalled FASTQ (./dataset/Illumina_fastq/)
 
-![workflow](./img/workflow.png) -->
-
-### Requirements
+## Sequence analysis and decoding (updates in progress)
+### Environments
 #### Languages
-- Python  
-- Matlab  
-- C  
+- Python (any version)
+- Matlab (with Communications Toolbox)
+- C (gcc 7.5.0+)
 
-#### Open-source Software (used in proposed workflow and decoding)
+#### Open-source Software
 - Edit distance based-clustering **[Starcode](https://github.com/gui11aume/starcode)**
 - Sequence alignment **[MUSCLE](https://github.com/rcedgar/muscle)** (version 5.0.1428)
 - Paired-end read merging **[PEAR](https://github.com/tseemann/PEAR)** (version 0.9.11)
 
-### Run
-- Erlich
+### Run (./src/)
+We implemented the [Erlich](https://github.com/TeamErlich/dna-fountain)'s method.  
+You can run it by `bash erlich.sh` with the following options.  
+` `
 
-## Reference in README
-[1]  
-[2]  
-[3]  
+Also, You can use our proposed method by `bash prop.sh` with the below options.  
+
+` `
 
 
 ## Contact
