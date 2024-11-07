@@ -4,4 +4,4 @@ Then, the cluster numbers of NPF reads are identified using the filter file.
 
 ### Cluster numbers of reads (./ncl/)
 Using the above method, it is possible to distinguish PF and NPF reads.  
-But, we provide the cluster numbers for PF and NPF reads for your convenience.  
+But, we provide the cluster numbers for PF and NPF reads for your convenience.
