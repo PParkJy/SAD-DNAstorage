@@ -40,9 +40,9 @@ We also provide the testset (FASTQ including PF and NPF reads) to use our method
 - C (gcc 7.5.0+)
 
 #### Open-source Software
-- Edit distance based-clustering **[Starcode](https://github.com/gui11aume/starcode)**
-- Sequence alignment **[MUSCLE](https://github.com/rcedgar/muscle)** (version 5.0.1428)
-- Paired-end read merging **[PEAR](https://github.com/tseemann/PEAR)** (version 0.9.11)
+- Edit distance based-clustering **[Starcode](https://github.com/gui11aume/starcode)** (to be installed in ./src/utils/starcode/)
+- Sequence alignment **[MUSCLE](https://github.com/rcedgar/muscle)** (version 5.0.1428) (to be installed in ./src/utils/MUSCLE/)
+- Paired-end read merging **[PEAR](https://github.com/tseemann/PEAR)** (version 0.9.11) (to be installed in ./src/utils/PEAR/)
 
 ### Run (./src/)
 #### Options
