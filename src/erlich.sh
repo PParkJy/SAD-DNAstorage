@@ -1,4 +1,4 @@
-# Erlich's sequence anlysis (DNA Fountain enables a robust and efficient storage architecture, https://doi.org/10.1126/science.aaj2038)
+# Proposed
 # Author: Jiyeon Park
 # Current version: Nov 5, 2024
 
@@ -19,8 +19,6 @@ if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ] || [ -z "$5" ]; then
     echo "Usage: $0 <seed_num> <sample_num> <trial_num> <use_NPF> <len_org>"
     exit 1
 fi
-
-merged_file="../result/${seed_num}/${sample_num}/extraNPF_${trial_num}.assembled.fastq"
 
 # Run 
 if [ ${use_NPF} -eq 0 ]; then
@@ -44,4 +42,4 @@ fi
 
 python ./utils/filter_cluster.py ${seed_num} ${sample_num} ${trial_num} ${use_NPF} ${len_org}
 python ./utils/RS_detect.py ${seed_num} ${sample_num} ${trial_num} ${use_NPF}
-matlab -nodisplay -nosplash -nodesktop -r "cd('./src/utils/'); LT_decode(${seed_num},${sample_num},${trial_num}, ${use_NPF});exit;" | tail -n +11
+matlab -nodisplay -nosplash -nodesktop -r "cd('./src/utils/'); LT_decode(${seed_num},${sample_num},${trial_num},${use_NPF},0);exit;" | tail -n +11

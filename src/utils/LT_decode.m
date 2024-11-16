@@ -1,4 +1,4 @@
-function LT_decode(seed_num, sample_num, trial_num, use_NPF) 
+function LT_decode(seed_num, sample_num, trial_num, use_NPF, use_porp) 
     % science decoding
     % Copyright (c) 2021 by Jae-Won Kim, Jaeho Jeong, and Seong-Joon Park,
     % from Coding and Cryptography Lab (CCL), Department of Electrical and Computer Engineering,
