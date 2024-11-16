@@ -29,6 +29,9 @@ The detailed method is described in README of "./dataset/".
 - AYB-basecalled FASTQ (./dataset/AYB_fastq/)
 - Illumina-basecalled FASTQ (./dataset/Illumina_fastq/)
 
+We also provide the testset (FASTQ including PF and NPF reads) to use our method.  
+- testset (./dataset/)
+
 ## Sequence analysis and decoding (updates in progress)
 ### Environments
 #### Languages
@@ -65,10 +68,10 @@ You can run it by `bash erlich.sh` with the following options.
 `bash erlich.sh <seed_num> <sample_num> <trial_num> <use_NPF> <len_org>`
 
 Also, You can use our proposed method by `bash prop.sh` with the below options.  
-`bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_adj> <len_org> <len_min> <len_max>`
+`bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_sub> <tau_del> <tau_ins> <tau_adj> <len_org> <len_min> <len_max>`  
 
-If you want to further adjust each error threshold for tailored edit distance-based clustering, you can run `prop_tail.sh` with the below options.  
-`bash prop_tail.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_sub> <tau_del> <tau_ins> <len_org> <len_min> <len_max>`
+If you want to only set the edit distance threshold `<tau_adj>` for tailored edit distance-based clustering, you can run `prop.sh` with the below options.  
+`bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> 0 0 0 <tau_adj> <len_org> <len_min> <len_max>`  
 
 ## Contact
 E-mail: wldus8677@gmail.com  
