@@ -32,7 +32,7 @@ The detailed method is described in README of "./dataset/".
 ## Sequence analysis and decoding (updates in progress)
 ### Environments
 #### Languages
-- Python (any version)
+- Python (3.7+)
 - Matlab (with Communications Toolbox)
 - C (gcc 7.5.0+)
 
@@ -42,14 +42,33 @@ The detailed method is described in README of "./dataset/".
 - Paired-end read merging **[PEAR](https://github.com/tseemann/PEAR)** (version 0.9.11)
 
 ### Run (./src/)
+#### Options
+- **<seed_num>:** Base seed of random generator (unsigned int)
+- **<sample_num>:** Random sampling number (unsigned int)
+- **<trial_num>:** Decoding trial index (unsigned int)
+- **<use_NPF>:** 0 - use only PF reads, 1 - use PF + NPF reads (0 or 1)
+- **<len_org>:** Original length of an oligo sequence (unsigned int)
+- **<tau_e>:** Edit distence threshold of starcode (unsigned int)
+- **<tau_adj>:** Edit distance thresholf of tailored edit distance-based clustering (unsigned int) 
+- **<tau_sub>:** Substitution threshold of tailored edit distance-based clustering (unsigned int)
+- **<tau_del>:** Deletion threshold of tailored edit distance-based clustering (unsigned int)
+- **<tau_ins>:** Insertion threshold of tailored edit distance-based clustering (unsigned int)
+- **<len_min>:** Minimum length of AL reads (unsigned int)
+- **<len_max>:** Maximum length of AL reads (unsigned int)
+
+#### Random sampling and merging
+`bash sampling.sh <seed_num> <sample_num> <trial_num>`
+
+#### Sequence analysis and decoding
 We implemented the [Erlich](https://github.com/TeamErlich/dna-fountain)'s method.  
 You can run it by `bash erlich.sh` with the following options.  
-` `
+`bash erlich.sh <seed_num> <sample_num> <trial_num> <use_NPF> <len_org>`
 
 Also, You can use our proposed method by `bash prop.sh` with the below options.  
+`bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_adj> <len_org> <len_min> <len_max>`
 
-` `
-
+If you want to further adjust each error threshold for tailored edit distance-based clustering, you can run `prop_tail.sh` with the below options.  
+`bash prop_tail.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_sub> <tau_del> <tau_ins> <len_org> <len_min> <len_max>`
 
 ## Contact
 E-mail: wldus8677@gmail.com  
