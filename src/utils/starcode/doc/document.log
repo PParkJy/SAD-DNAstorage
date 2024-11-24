@@ -1,0 +1,706 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.27)  25 JAN 2015 17:04
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**document.tex
+(./document.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(./bioinfo.cls
+Document Class: bioinfo 2003/02/08 0.1
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+) (./crop.sty
+Package: crop 2001/11/16 v1.6 cropmarks (mf)
+\CROP@width=\dimen102
+\CROP@height=\dimen103
+\CROP@index=\count79
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count80
+))
+\CROP@offset=\count81
+Package crop Info: Local config file crop.cfg used on input line 344.
+ (./crop.cfg))
+Package crop Info: using pdf(la)tex graphics driver on input line 33.
+ (./graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip41
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen106
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count82
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count83
+\leftroot@=\count84
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count85
+\DOTSCASE@=\count86
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count87
+\c@MaxMatrixCols=\count88
+\dotsspace@=\muskip10
+\c@parentequation=\count89
+\dspbrk@lvl=\count90
+\tag@help=\toks18
+\row@=\count91
+\column@=\count92
+\maxfields@=\count93
+\andhelp@=\toks19
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks20
+\multlinegap=\skip42
+\multlinetaggap=\skip43
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) (./array.sty
+Package: array 1998/05/13 v2.3m Tabular extension package (FMi)
+\col@sep=\dimen115
+\extrarowheight=\dimen116
+\NC@list=\toks22
+\extratabsurround=\skip44
+\backup@length=\skip45
+)
+(./color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 125.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(./flushend.sty
+Package: flushend 1997/10/01
+\@aaa=\box28
+\@ccc=\box29
+\@viper=\box30
+\hold@viper=\box31
+\atColsBreak=\toks23
+\@extra@skip=\dimen117
+\@nd@page@rule=\dimen118
+) (./stfloats.sty
+Package: stfloats 1999/10/22
+\@dblbotnum=\count94
+\c@dblbotnumber=\count95
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks29
+) (./chngpage.sty
+Package: chngpage 2001/01/31 v1.1b change page layout
+\c@cp@cnt=\count96
+\c@cp@tempcnt=\count97
+)
+(./times.sty
+Package: times 2000/01/12 PSNFSS-v8.1 Times font as default roman (SPQR) 
+)
+\c@section=\count98
+\c@subsection=\count99
+\c@subsubsection=\count100
+\c@paragraph=\count101
+\c@subparagraph=\count102
+\c@figure=\count103
+\c@table=\count104
+\dropfromtop=\skip49
+\extraspace=\skip50
+\aboveskipchk=\skip51
+\abovecaptionskip=\skip52
+\belowcaptionskip=\skip53
+\rotdimen=\dimen119
+\tempdime=\dimen120
+\temptbox=\box32
+ (./natbib.sty
+Package: natbib 2000/07/24 7.0a (PWD)
+\bibhang=\skip54
+\bibsep=\skip55
+LaTeX Info: Redefining \cite on input line 508.
+\c@NAT@ctr=\count105
+))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+ (./float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count106
+\float@exts=\toks30
+\float@box=\box33
+\@float@everytoks=\toks31
+\@floatcapt=\box34
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks32
+\c@algorithm=\count107
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count108
+\c@ALG@rem=\count109
+\c@ALG@nested=\count110
+\ALG@tlm=\skip56
+\ALG@thistlm=\skip57
+\c@ALG@Lnr=\count111
+\c@ALG@blocknr=\count112
+\c@ALG@storecount=\count113
+\c@ALG@tmpcounter=\count114
+\ALG@tmplength=\skip58
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (./document.aux)
+\openout1 = `document.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 8.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count115
+\scratchdimen=\dimen121
+\scratchbox=\box35
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count118
+\MPscratchDim=\dimen122
+\MPnumerator=\count119
+\makeMPintoPDFobject=\count120
+\everyMPtoPDFconversion=\toks34
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 25.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <9> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <9> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <19> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <19> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <16> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 25.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 25.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
+(Font)              size <6> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13> not available
+(Font)              size <12> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.5> not available
+(Font)              size <6> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.5> not available
+(Font)              size <6> substituted on input line 25.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Calculating math sizes for size <9.09996> on input line 25.
+
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.54997> not available
+(Font)              size <5> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.54997> not available
+(Font)              size <5> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.54997> not available
+(Font)              size <5> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
+(Font)              size <7> substituted on input line 25.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 25.
+
+
+Underfull \hbox (badness 10000) detected at line 25
+[]
+ []
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 28.
+
+Underfull \hbox (badness 1496) in paragraph at lines 28--37
+\OT1/phv/m/n/8 In many of those applications, sequencing errors need to be
+ []
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 56.
+
+Underfull \hbox (badness 1043) in paragraph at lines 66--74
+\OT1/ptm/m/n/9 available. When the sequences are random or taken from an
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 81--90
+[]\OT1/ptm/m/n/9 Here we describe a sequence clustering algorithm called
+ []
+
+<NW.pdf, id=1, 227.62039pt x 142.26149pt>
+File: NW.pdf Graphic file (type pdf)
+ <use NW.pdf>
+Package pdftex.def Info: NW.pdf used on input line 111.
+(pdftex.def)             Requested size: 227.61983pt x 142.26112pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 131.
+
+<trie.pdf, id=2, 250.28908pt x 213.39726pt>
+File: trie.pdf Graphic file (type pdf)
+ <use trie.pdf>
+Package pdftex.def Info: trie.pdf used on input line 160.
+(pdftex.def)             Requested size: 250.28847pt x 213.39673pt.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 176.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 176.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+<poucet.pdf, id=23, 241.84352pt x 170.7178pt>
+File: poucet.pdf Graphic file (type pdf)
+ <use poucet.pdf>
+Package pdftex.def Info: poucet.pdf used on input line 204.
+(pdftex.def)             Requested size: 241.84293pt x 170.71738pt.
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <8> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 233.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <8> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 233.
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[2 <./NW.pdf> <./trie.pdf> <./poucet.pdf>]
+<filtration.pdf, id=117, 250.38544pt x 113.81522pt>
+File: filtration.pdf Graphic file (type pdf)
+ <use filtration.pdf>
+Package pdftex.def Info: filtration.pdf used on input line 259.
+(pdftex.def)             Requested size: 250.38481pt x 113.81493pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 288.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+ [3 <./filtration.pdf>]
+Underfull \hbox (badness 2653) in paragraph at lines 367--382
+\OT1/ptm/m/n/8 The default clustering algorithm of starcode is designed to corr
+ect
+ []
+
+
+Underfull \hbox (badness 4013) in paragraph at lines 392--400
+\OT1/ptm/m/n/8 purpose algorithm called ``sphere clustering''. In sphere cluste
+ring,
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 417.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \hbox (3.78911pt too wide) in paragraph at lines 414--424
+ [][] 
+ []
+
+
+Overfull \hbox (1.62912pt too wide) in paragraph at lines 430--441
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 450--468
+\OT1/ptm/m/n/9 the canonical sequences are printed, which is useful to filter
+ []
+
+<scalability.pdf, id=147, 505.89pt x 505.89pt>
+File: scalability.pdf Graphic file (type pdf)
+ <use scalability.pdf>
+Package pdftex.def Info: scalability.pdf used on input line 505.
+(pdftex.def)             Requested size: 237.76833pt x 237.76833pt.
+
+Underfull \hbox (badness 7667) in paragraph at lines 516--525
+\OT1/ptm/m/n/9 We benchmarked starcode against the sequence clustering
+ []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[4]
+Underfull \hbox (badness 1590) in paragraph at lines 527--544
+[]\OT1/ptm/m/n/9 The performance of sequence clustering algorithms can be
+ []
+
+<benchmark.pdf, id=152, 505.89pt x 505.89pt>
+File: benchmark.pdf Graphic file (type pdf)
+ <use benchmark.pdf>
+Package pdftex.def Info: benchmark.pdf used on input line 546.
+(pdftex.def)             Requested size: 237.76833pt x 237.76833pt.
+
+Underfull \hbox (badness 4940) in paragraph at lines 562--573
+\OT1/ptm/m/n/9 the clustering achieved by seed and cd-hit is incomplete.
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 562--573
+\OT1/ptm/m/n/9 Both tools identify approximately 40 false clusters per true
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 562--573
+\OT1/ptm/m/n/9 slidesort is claimed to be an exact algorithm. However, this
+ []
+
+
+Underfull \hbox (badness 2932) in paragraph at lines 562--573
+\OT1/ptm/m/n/9 was clearly not the case when we ran additional tests on
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+ [5 <./scalability.pdf> <./benchmark.pdf>]
+Underfull \hbox (badness 1400) in paragraph at lines 634--648
+\OT1/ptm/m/n/9 threshold for the first dataset to compensate for the reduced
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 694--705
+\OT1/ptm/m/n/9 for other applications, such as the identification of enriched
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 694--705
+\OT1/ptm/m/n/9 targeting them to the sites where they act. Identifying those
+ []
+
+Missing character: There is no   in font ptmr7t!
+
+Underfull \hbox (badness 1571) in paragraph at lines 726--746
+\OT1/ptm/m/n/9 RNA GA-rich motifs, but there is some disagreement about
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 726--746
+\OT1/ptm/m/n/9 the motif that it recognizes (Pandit \OT1/ptm/m/it/9 et al.\OT1/
+ptm/m/n/9 , 2013). For each
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 726--746
+\OT1/ptm/m/n/9 10-mer is thus the sum of the ranks of all 10-mers within
+ []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[6]
+Underfull \hbox (badness 1147) in paragraph at lines 765--779
+\OT1/ptm/m/n/9 genomes and in experimental data. Here we have given two
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 780--789
+\OT1/ptm/m/n/9 sequences. When clustering related but divergent sequences,
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 780--789
+\OT1/ptm/m/n/9 the Levenshtein distance will have to be increased, leading
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 780--789
+\OT1/ptm/m/n/9 to exponentially longer running times (Figure 5[]b). However,
+ []
+
+(./document.bbl
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ¦ in font ptmr7t!
+)
+Extra height:0.0pt when 607.41992pt
+(2)Left:607.41992pt Right:606.83984pt Output:607.41992pt
+- LAST -
+Extra skip:0.0pt
+Left:607.41992pt
+Right:606.83984pt
+Output:607.41992pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+ [7]
+(./document.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3994 strings out of 493304
+ 51682 string characters out of 6139871
+ 152344 words of memory out of 5000000
+ 7324 multiletter control sequences out of 15000+600000
+ 54509 words of font info for 109 fonts, out of 8000000 for 9000
+ 961 hyphenation exceptions out of 8191
+ 38i,11n,28p,1311b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
+ic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on document.pdf (7 pages, 1261376 bytes).
+PDF statistics:
+ 231 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
