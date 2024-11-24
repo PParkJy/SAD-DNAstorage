@@ -102,7 +102,7 @@ for i in rs_fail:
     f.write(i + "\n")
 f.close()
 
-f = open(save_filepath + "RSpass_" + str(trial_num) + ".txt", "w")
+f = open(save_filepath + "errfree_" + str(trial_num) + "_S1.txt", "w")
 for i in rs_pass:
     f.write(i + "\n")
 f.close()

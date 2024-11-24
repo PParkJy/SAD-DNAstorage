@@ -26,7 +26,7 @@ if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ] || [ -z "$5" ] || [ 
     exit 1
 fi
 
-if [ ${tau_adj} -lt $tau_sub + $tau_del + $tau_ins ]; then
+if [ ${tau_adj} -lt ${tau_sub} + ${tau_del} + ${tau_ins} ]; then
     echo "Error: <tau_adj> must be larger than the sum of <tau_sub>, <tau_del> and <tau_ins>"
     exit 1
 fi
@@ -40,27 +40,28 @@ mkdir -p ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${ta
 mkdir -p ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/LT_dec
 mkdir -p ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/cluster
 mkdir -p ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/align
-mkdir -p ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/RS_chk
+mkdir -p ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/RS_check
 mkdir -p ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/LT_dec
 
-# Stage 2
-./utils/starcode/starcode -d ${tau_e} -t 30 -s --seq-id -i ../../result/${seed_num}/${sample_num}/extraNPF/RS_check/RSfail_${trial_num}.fasta -o ../../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/cluster/clustered_${trial_num}.txt
+# Stage 2 ===========================================================================================
+./utils/starcode/starcode -d ${tau_e} -t 30 -s --seq-id -i ../../../result/${seed_num}/${sample_num}/extraNPF/RS_check/RSfail_${trial_num}.fasta -o ../../../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/clustered.txt
 python ./utils/post_clustering.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} 2 
 for eachfile in `find ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/cluster/ -maxdepth 1 -name '*.fasta'`
-do
     f_name=`basename "$eachfile"`
-    ./utils/MUSCLE/muscle_v5.0.1428_linux -align $eachfile -output ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/align/${f_name} -threads 30 &
+    ./utils/MUSCLE/muscle_v5.0.1428_linux -align $eachfile -output ../../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/align/${f_name} -threads 30 &
 done 
-python ./utils/consensus.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} 2
+python ./utils/consensus.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} ../../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/cluster/ 2
 
-# Stage 3
-python ./utils/al_length.py ${seed_num} ${sample_num} ${trial_num} ${len_org} ${len_min} ${len_max}
-./utils/tail_edit/tailored_clustering -d ${other_dist} -t 30 -x 0 -y 0 -z 0 -e ${tau_adj} -j --seq-id -i ${eachfile} -o ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/cluster/clustered_${trial_num}.txt
+# Stage 3 ===========================================================================================
+python ./utils/al_filter.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj}  ${len_org} ${len_min} ${len_max}
+./utils/tail_edit/tailored_clustering -d ${other_dist} -t 30 -x ${tau_sub} -y ${tau_del} -z ${tau_ins} -e ${tau_adj} -j --seq-id -i ../../../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/RS_check/RSfail_withAL_${trial_num}.fasta -o ../../../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/clustered.txt
 python ./utils/post_clustering.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} 3
 for eachfile in `find ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/cluster/ -maxdepth 1 -name '*.fasta'`
 do
     f_name=`basename "$eachfile"`
     ./utils/MUSCLE/muscle_v5.0.1428_linux -align $eachfile -output ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/align/${f_name} -threads 30 &
 done 
-python ./utils/consensus.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} 3
+python ./utils/consensus.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/cluster/ 3
+
+# LT erasure decoding
 matlab -nodisplay -nosplash -nodesktop -r "cd('./src/utils/'); LT_decode_prop(${seed_num},${sample_num},${trial_num},${tau_e},${tau_adj});exit;" | tail -n +11

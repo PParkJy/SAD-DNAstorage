@@ -1,4 +1,4 @@
-function LT_decode(seed_num, sample_num, trial_num, use_NPF) 
+function LT_decode(seed_num, sample_num, trial_num, tau_e, tau_adj) 
     % science decoding
     % Copyright (c) 2021 by Jae-Won Kim, Jaeho Jeong, and Seong-Joon Park,
     % from Coding and Cryptography Lab (CCL), Department of Electrical and Computer Engineering,
@@ -94,14 +94,7 @@ function LT_decode(seed_num, sample_num, trial_num, use_NPF)
     end
 
     %%%%%%%%%%%%%%%%%%%%%%%%For modification%%%%%%%%%%%%%%%%%%%%%%%%
-    mode = '';
-    if (use_NPF == 0)
-        disp('use only PF');
-        mode = 'PF';
-    elseif (modes == 1)
-        disp('use PF + NPF');
-        mode = 'extraNPF';
-    end
+    mode = 'extraNPF';
     disp(sample_num);
 
     Result_collect = zeros(1,1);  %% 0 - lack of inference, 1 - decoding success, 2 - decoding fail
@@ -113,7 +106,7 @@ function LT_decode(seed_num, sample_num, trial_num, use_NPF)
 
     %%%%%%%%%%%%%%%%%LT parameter + seed parameter%%%%%%%%%%%%%%%%%%%
     % Load RS code passed data
-    input_dataName = sprintf(".../../result/" + string(seed_num) + "/" + string(sample_num) + "/" + mode + "/RS_check/errfree_" + string(trial_num) + "_S1.txt"); 
+    input_dataName = sprintf(".../../result/" + string(seed_num) + "/" + string(sample_num) + "/" + mode + "/prop/" + string(trial_num) + "/edit" + string(tau_e) + "/edit" + string(tau_adj) + "/RS_check/errfree_prop.txt"); 
     [FP1] = fopen(input_dataName,'r');      
     base_data_save = fscanf(FP1,'%s'); 
     fclose(FP1);
@@ -292,7 +285,7 @@ function LT_decode(seed_num, sample_num, trial_num, use_NPF)
         end   
     end
 
-    output_filename = sprintf(".../../result/" + string(seed_num) + "/" + string(sample_num) + "/" + mode + "/LT_dec/result_" + string(trial_num) + ".txt");
+    output_filename = sprintf(".../../result/" + string(seed_num) + "/" + string(sample_num) + "/" + mode + "/prop/" + string(trial_num) + "/edit" + string(tau_e) + "/edit" + string(tau_adj) + "/LT_dec/result_prop.txt");
     [FP] = fopen(output_filename,'wt');
 
     fprintf(FP,'%d %d %d %d %d %d\n', trial_num, Result_collect(1), Trial_Number_collect(1), LT_real_N_collect(1), LT_decoding_observance_collect(1), inferred_idxs(1));
