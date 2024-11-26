@@ -16,8 +16,8 @@ tau_del=$6
 tau_ins=$7
 tau_adj=$8
 len_org=$9
-len_min=$10
-len_max=$11
+len_min=${10}
+len_max=${11}
 
 # Check arguments
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ] || [ -z "$5" ] || [ -z "$6" ] || [ -z "$7" ] || [ -z "$8" ] || [ -z "$9" ] || [ -z "$10" ] || [ -z "$11" ] ; then
@@ -54,7 +54,7 @@ done
 python ./utils/consensus.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/align/ 2
 
 # Stage 3 ===========================================================================================
-python ./utils/al_filter.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj}  ${len_org} ${len_min} ${len_max}
+python ./utils/al_filter.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} ${len_org} ${len_min} ${len_max}
 ./utils/tail_edit/tailored_clustering -l ${len_org} -t 30 -x ${tau_sub} -y ${tau_del} -z ${tau_ins} -e ${tau_adj} -j --seq-id -i ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/RS_check/RSfail_withAL_${trial_num}.fasta -o ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/clustered.txt
 python ./utils/post_clustering.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} 3
 for eachfile in `find ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/cluster/ -maxdepth 1 -name '*.fasta'`
