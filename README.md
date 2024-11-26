@@ -82,17 +82,18 @@ All binary files require the execute permisson (+x)
 `bash sampling.sh <seed_num> <sample_num> <trial_num> <r1_filename> <r2_filename>`
 
 #### Sequence analysis and decoding
-This process should be carried out after the "Random sampling and merging" process above.  
+*This process should be carried out after the "Random sampling and merging" process above.*  
 
 First, we implemented the [Erlich](https://github.com/TeamErlich/dna-fountain)'s method.  
 You can use it by `bash erlich.sh` with the following options.  
 `bash erlich.sh <seed_num> <sample_num> <trial_num> <use_NPF> <len_org>`
 
-Also, You can use our proposed method by `bash prop.sh` with the below options.   
+Then, you can use our proposed method by `bash prop.sh` with the below options.   
 This method should be used after `bash erlich.sh <seed_num> <sample_num> <trial_num> 1 <len_org>`   
 `bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_sub> <tau_del> <tau_ins> <tau_adj> <len_org> <len_min> <len_max>`  
 
-If you want to only set the edit distance threshold `<tau_adj>` for tailored edit distance-based clustering, you can run `prop.sh` with the below options.  
+The summation of <tau_sub>, <tau_del>, and <tau_ins> should be less than <tau_adj>.   
+If you want to only set the edit distance threshold `<tau_adj>` without considering the each error threshold, you can run `prop.sh` with the below options. (default option)  
 `bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> 0 0 0 <tau_adj> <len_org> <len_min> <len_max>`  
 
 ## Contact
