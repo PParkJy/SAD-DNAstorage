@@ -26,7 +26,7 @@ use_NPF = int(sys.argv[4])
 len_org = int(sys.argv[5])
 
 # Load data
-f = open("../../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF_" + str(trial_num) + ".assembled.fastq", "r")
+f = open("../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF_" + str(trial_num) + ".assembled.fastq", "r")
 lines = f.readlines()
 f.close()
 
@@ -35,7 +35,7 @@ len_filter = []
 if use_NPF == 0: # use only PF
     # PF reads filtering
     for tile in tiles:
-        f = open("../../ncl/s_1_" + str(tile) + "_PF.txt", "r")
+        f = open("../dataset/ncl/s_1_" + str(tile) + "_PF.txt", "r")
         cl_list = f.readlines()
         f.close()
         cl_list = list(map(int, cl_list))
@@ -46,7 +46,7 @@ if use_NPF == 0: # use only PF
                 tile_num = int(value[2])
                 org_cl = int(int(value[3]) * (int(value[3]) - 1) / 2 + int(value[4].split("/")[0])) 
 
-                if binary_search(cl_list, org_cl) != -1 and len(val[:-1]) == 152:
+                if binary_search(cl_list, org_cl) != -1 and len(val[:-1]) == len_org:
                     len_filter.append(val)
 
 elif use_NPF == 1: # use PF + NPF
@@ -71,12 +71,12 @@ result = sorted(zip(reads, sizes), key = lambda x:x[1], reverse=True)
 # Save file
 filepath = ""
 if use_NPF == 0:
-    filepath = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/PF/len/"
+    filepath = "../result/" + str(seed_num) + "/" + str(sample_num) + "/PF/len/"
 else:
-    filepath = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/len/"
+    filepath = "../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/len/"
 
-f = open(filepath + "clustered_" + str(trial_num) + "_len152.txt", "w")
+f = open(filepath + "clustered_" + str(trial_num) + "_len" + str(len_org) + ".txt", "w")
 for idx, val in enumerate(result):
-    f.write(val)
+    f.write(val[0])
 f.close()
 

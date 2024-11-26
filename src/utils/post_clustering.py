@@ -14,13 +14,13 @@ org_path = ""
 cl_path = ""
 savepath = ""
 if stage == 2:
-    org_path = "../../result/" + seed_num + "/" + sample_num + "extraNPF/RS_check/RSfail_" + trial_num + ".fasta"
-    cl_path = "../../result/" + seed_num + "/" + sample_num + "extraNPF/prop/" + trial_num + "/edit" + tau_e + "/clustered.txt"
-    savepath = "../../result/" + seed_num + "/" + sample_num + "extraNPF/prop/" + trial_num + "/edit" + tau_e + "/cluster/"
+    org_path = "../result/" + seed_num + "/" + sample_num + "/extraNPF/RS_check/RSfail_" + trial_num + ".fasta"
+    cl_path = "../result/" + seed_num + "/" + sample_num + "/extraNPF/prop/" + trial_num + "/edit" + tau_e + "/clustered.txt"
+    savepath = "../result/" + seed_num + "/" + sample_num + "/extraNPF/prop/" + trial_num + "/edit" + tau_e + "/cluster/"
 elif stage == 3:
-    org_path = "../../result/" + seed_num + "/" + sample_num + "extraNPF/prop/" + trial_num + "/edit" + tau_e + "/RS_check/RSfail_withAL_" + trial_num + ".fasta"
-    cl_path = "../../result/" + seed_num + "/" + sample_num + "extraNPF/prop/" + trial_num + "/edit" + tau_e + "/edit" + tau_adj + "/clustered.txt"
-    savepath = "../../result/" + seed_num + "/" + sample_num + "extraNPF/prop/" + trial_num + "/edit" + tau_e + "/edit" + tau_adj + "/cluster/"
+    org_path = "../result/" + seed_num + "/" + sample_num + "/extraNPF/prop/" + trial_num + "/edit" + tau_e + "/RS_check/RSfail_withAL_" + trial_num + ".fasta"
+    cl_path = "../result/" + seed_num + "/" + sample_num + "/extraNPF/prop/" + trial_num + "/edit" + tau_e + "/edit" + tau_adj + "/clustered.txt"
+    savepath = "../result/" + seed_num + "/" + sample_num + "/extraNPF/prop/" + trial_num + "/edit" + tau_e + "/edit" + tau_adj + "/cluster/"
 else:
     print("Invalid option in post_clustering")
     sys.exit(0)
@@ -40,6 +40,8 @@ f = open(cl_path, "r")
 clusters = f.readlines()
 f.close()
 
+cl_size1 = [] # Directly move to stage 3 
+
 # Post-processing to clusters for alignment
 for idx, val in enumerate(clusters):
     temp = val.split("\t")[2].split(",")
@@ -53,11 +55,12 @@ for idx, val in enumerate(clusters):
             f.write(seq)
         f.close()
     elif len(seqs) == 1:
-        f = open(savepath + str(idx + 1) + ".fasta", "w")
-        f.write("> 1\n")
-        f.write(seqs[0])
-        f.close()
-print("\n")
+        cl_size1.append(seqs[0])
+
+f = open(savepath + "cl_size1.txt", "w")
+for i in cl_size1:
+    f.write(i)
+f.close()
 
 
 

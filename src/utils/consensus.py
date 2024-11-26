@@ -114,7 +114,7 @@ for filename in fileList:
     f.close()
 
     # Consensus process
-    if len(lines) > 2: # consensus is condeucted when cluster size > 1
+    if len(lines) > 2: # After the alignment by MUSCLE, the reads divided into multiple lines.
         temp = []
         temp_fail = []
         temp_seq = ""
@@ -309,12 +309,12 @@ for filename in fileList:
                 for k in temp_fail:
                     fails.append(k)
 
-    else: # cluster size == 1 -> cannot try the consensus 
-        fails.append(lines[1][:-1])
+    #else: # cluster size == 1 -> 
+        #fails.append(lines[1][:-1])
 
 # Save results
 if stage == 2:
-    orig_file = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/RS_check/errfree_" + str(trial_num) + "_S1.txt"
+    orig_file = "../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/RS_check/errfree_" + str(trial_num) + "_S1.txt"
 
     f = open(orig_file, "r")
     origs = f.readlines()
@@ -327,7 +327,7 @@ if stage == 2:
             real_result.append(BitToACGT(i[1]))
 
     real_result = list(set(real_result))
-    savepath = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/prop/" + str(trial_num) + "/edit" + str(tau_e) + "/RS_check/"
+    savepath = "../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/prop/" + str(trial_num) + "/edit" + str(tau_e) + "/RS_check/"
 
     f = open(savepath + "RSfail_S2.fasta", "w")
     for i in fails:
@@ -343,12 +343,12 @@ if stage == 2:
 elif stage == 3:
     origs = []
 
-    orig_file1 = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/RS_check/errfree_" + str(trial_num) + "_S1.txt"
+    orig_file1 = "../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/RS_check/errfree_" + str(trial_num) + "_S1.txt"
     f = open(orig_file1, "r")
     origs.extend(f.readlines())
     f.close()
 
-    orig_file2 = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/prop/" + str(trial_num) + "/edit" + str(tau_e) + "/RS_check/errfree_S2.txt"
+    orig_file2 = "../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/prop/" + str(trial_num) + "/edit" + str(tau_e) + "/RS_check/errfree_S2.txt"
     f = open(orig_file2, "r")
     origs.extend(f.readlines())
     f.close()
@@ -360,7 +360,7 @@ elif stage == 3:
             real_result.append(BitToACGT(i[1]))
 
     real_result = list(set(real_result))
-    savepath = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/prop/" + str(trial_num) + "/edit" + str(tau_e) + "/edit" + str(tau_adj) + "/RS_check/"
+    savepath = "../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/prop/" + str(trial_num) + "/edit" + str(tau_e) + "/edit" + str(tau_adj) + "/RS_check/"
 
     f = open(savepath + "RSfail_S3.fasta", "w")
     for i in fails:

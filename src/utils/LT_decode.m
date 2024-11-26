@@ -4,7 +4,7 @@ function LT_decode(seed_num, sample_num, trial_num, use_NPF)
     % from Coding and Cryptography Lab (CCL), Department of Electrical and Computer Engineering,
     % Seoul National University, South Korea.
     % Email address: jaehoj@ccl.snu.ac.kr
-    % Fixed by jiyeon park of Chonnam National University, Soutch Korea,
+    % Revised by jiyeon park of Chonnam National University, Soutch Korea,
     % wldus8677@gmail.com
     % All Rights Reserved.
 
@@ -77,7 +77,7 @@ function LT_decode(seed_num, sample_num, trial_num, use_NPF)
     Binary_Data_input = zeros(LT_K,LT_L); 
 
     % Load saved image bit file
-    input_filename = sprintf('../../dataset/source/image_restart.txt'); 
+    input_filename = sprintf('../dataset/source/image_restart.txt'); 
     [FP] = fopen(input_filename,'r');
     input_data_save = fscanf(FP,'%d'); 
     fclose(FP);
@@ -113,7 +113,7 @@ function LT_decode(seed_num, sample_num, trial_num, use_NPF)
 
     %%%%%%%%%%%%%%%%%LT parameter + seed parameter%%%%%%%%%%%%%%%%%%%
     % Load RS code passed data
-    input_dataName = sprintf(".../../result/" + string(seed_num) + "/" + string(sample_num) + "/" + mode + "/RS_check/errfree_" + string(trial_num) + "_S1.txt"); 
+    input_dataName = sprintf("../result/" + string(seed_num) + "/" + string(sample_num) + "/" + mode + "/RS_check/errfree_" + string(trial_num) + "_S1.txt"); 
     [FP1] = fopen(input_dataName,'r');      
     base_data_save = fscanf(FP1,'%s'); 
     fclose(FP1);
@@ -292,7 +292,7 @@ function LT_decode(seed_num, sample_num, trial_num, use_NPF)
         end   
     end
 
-    output_filename = sprintf(".../../result/" + string(seed_num) + "/" + string(sample_num) + "/" + mode + "/LT_dec/result_" + string(trial_num) + ".txt");
+    output_filename = sprintf("../result/" + string(seed_num) + "/" + string(sample_num) + "/" + mode + "/LT_dec/result_" + string(trial_num) + ".txt");
     [FP] = fopen(output_filename,'wt');
 
     fprintf(FP,'%d %d %d %d %d %d\n', trial_num, Result_collect(1), Trial_Number_collect(1), LT_real_N_collect(1), LT_decoding_observance_collect(1), inferred_idxs(1));

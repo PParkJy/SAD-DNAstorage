@@ -45,13 +45,14 @@ seed_num = int(sys.argv[1])
 sample_num = int(sys.argv[2])
 trial_num = int(sys.argv[3])
 use_NPF = int(sys.argv[4])
+len_org = int(sys.argv[5])
 
 # Load data
 filepath = ""
 if use_NPF == 0:
-    filepath = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/PF/len/clustered_" + str(trial_num) + "_len152.txt"
+    filepath = "../result/" + str(seed_num) + "/" + str(sample_num) + "/PF/len/clustered_" + str(trial_num) + "_len" + str(len_org) + ".txt"
 else:
-    filepath = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/len/clustered_" + str(trial_num) + "_len152.txt"
+    filepath = "../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/len/clustered_" + str(trial_num) + "_len" + str(len_org) + ".txt"
 
 f = open(filepath, "r")
 reads = f.readlines()
@@ -61,7 +62,7 @@ f.close()
 result = []
 for i in reads:
     bits = []
-    for j in i[0][:-1]: #for j in i:
+    for j in i[:-1]: #for j in i:
         if j == 'A':
             bits.append(0)
             bits.append(0)
@@ -90,9 +91,9 @@ for idx, val in enumerate(result):
 save_filepath = ""
 
 if use_NPF == 0:
-    save_filepath = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/PF/RS_check/"
+    save_filepath = "../result/" + str(seed_num) + "/" + str(sample_num) + "/PF/RS_check/"
 elif use_NPF == 1:
-    save_filepath = "../../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/RS_check/"
+    save_filepath = "../result/" + str(seed_num) + "/" + str(sample_num) + "/extraNPF/RS_check/"
 else:
     sys.exit(0)
 
