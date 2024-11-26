@@ -45,29 +45,51 @@ We also provide the testset (FASTQ including PF and NPF reads) to use our method
 - Paired-end read merging **[PEAR](https://github.com/tseemann/PEAR)** (version 0.9.11) (to be located in ./src/utils/PEAR/)
 
 ### Run (./src/)
+All binary files require the execute permisson (+x)  
+
 #### Options
-- **<seed_num>:** Base seed of random generator (unsigned int)
-- **<sample_num>:** Random sampling number (unsigned int)
-- **<trial_num>:** Decoding trial index (unsigned int)
-- **<use_NPF>:** 0 - use only PF reads, 1 - use PF + NPF reads (0 or 1)
-- **<len_org>:** Original length of an oligo sequence (unsigned int)
-- **<tau_e>:** Edit distence threshold of starcode (unsigned int)
-- **<tau_adj>:** Edit distance thresholf of tailored edit distance-based clustering (unsigned int) 
-- **<tau_sub>:** Substitution threshold of tailored edit distance-based clustering (unsigned int)
-- **<tau_del>:** Deletion threshold of tailored edit distance-based clustering (unsigned int)
-- **<tau_ins>:** Insertion threshold of tailored edit distance-based clustering (unsigned int)
-- **<len_min>:** Minimum length of AL reads (unsigned int)
-- **<len_max>:** Maximum length of AL reads (unsigned int)
+- **<seed_num>** (unsigned int)
+  - Base seed of random generator 
+- **<sample_num>** (unsigned int)
+  - Random sampling number  
+- **<trial_num>** (unsigned int)
+  - Decoding trial index 
+- **<r1_filename>** (without filename extenstion)
+  - FASTQ filename of R1 reads (must be located under ./dataset)  
+- **<r2_filename>** (without filename extenstion)
+  - FASTQ filename of R2 reads (must be located under ./dataset)  
+- **<use_NPF>** (0 or 1)
+  - 0 - use only PF reads
+  - 1 - use PF + NPF reads 
+- **<len_org>** (unsigned int)
+  - Original length of an oligo sequence 
+- **<tau_e>** (unsigned int)
+  - Edit distence threshold of starcode
+- **<tau_adj>** (unsigned int) 
+  - Edit distance thresholf of tailored edit distance-based clustering 
+- **<tau_sub>** (unsigned int)
+  - Substitution threshold of tailored edit distance-based clustering 
+- **<tau_del>** (unsigned int)
+  - Deletion threshold of tailored edit distance-based clustering 
+- **<tau_ins>** (unsigned int)
+  - Insertion threshold of tailored edit distance-based clustering 
+- **<len_min>** (unsigned int)
+  - Minimum length of AL reads 
+- **<len_max>** (unsigned int)
+  - Maximum length of AL reads 
 
 #### Random sampling and merging
-`bash sampling.sh <seed_num> <sample_num> <trial_num>`
+`bash sampling.sh <seed_num> <sample_num> <trial_num> <r1_filename> <r2_filename>`
 
 #### Sequence analysis and decoding
-We implemented the [Erlich](https://github.com/TeamErlich/dna-fountain)'s method.  
-You can run it by `bash erlich.sh` with the following options.  
+This process should be carried out after the "Random sampling and merging" process above.  
+
+First, we implemented the [Erlich](https://github.com/TeamErlich/dna-fountain)'s method.  
+You can use it by `bash erlich.sh` with the following options.  
 `bash erlich.sh <seed_num> <sample_num> <trial_num> <use_NPF> <len_org>`
 
-Also, You can use our proposed method by `bash prop.sh` with the below options.  
+Also, You can use our proposed method by `bash prop.sh` with the below options.   
+This method should be used after `bash erlich.sh <seed_num> <sample_num> <trial_num> 1 <len_org>`   
 `bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_sub> <tau_del> <tau_ins> <tau_adj> <len_org> <len_min> <len_max>`  
 
 If you want to only set the edit distance threshold `<tau_adj>` for tailored edit distance-based clustering, you can run `prop.sh` with the below options.  
