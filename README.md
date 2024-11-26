@@ -48,34 +48,48 @@ We also provide the testset (FASTQ including PF and NPF reads) to use our method
 *All binary files require the execute permisson (+x)*  
 
 #### Options
-- **`<seed_num>`** (unsigned int)
+- **`<seed_num>`** 
+  - unsigned int
   - Base seed of random generator 
-- **`<sample_num>`** (unsigned int)
+- **`<sample_num>`** 
+  - unsigned int
   - Random sampling number  
-- **`<trial_num>`** (unsigned int)
+- **`<trial_num>`** 
+  - unsigned int
   - Decoding trial index 
-- **`<r1_filename>`** (without filename extenstion)
+- **`<r1_filename>`** 
+  - string without filename extenstion
   - FASTQ filename of R1 reads (must be located under ./dataset)  
-- **`<r2_filename>`** (without filename extenstion)
+- **`<r2_filename>`** 
+  - string without filename extenstion
   - FASTQ filename of R2 reads (must be located under ./dataset)  
-- **`<use_NPF>`** (0 or 1)
+- **`<use_NPF>`** 
+  - 0 or 1
   - 0 - use only PF reads
   - 1 - use PF + NPF reads 
-- **`<len_org>`** (unsigned int)
+- **`<len_org>`** 
+  - unsigned int
   - Original length of an oligo sequence 
-- **`<tau_e>`** (unsigned int)
+- **`<tau_e>`** 
+  - unsigned int
   - Edit distence threshold of starcode
-- **`<tau_adj>`** (unsigned int) 
-  - Edit distance thresholf of tailored edit distance-based clustering 
-- **`<tau_sub>`** (unsigned int)
+- **`<tau_adj>`** 
+  - unsigned int 
+  - Edit distance threshold of tailored edit distance-based clustering 
+- **`<tau_sub>`** 
+  - unsigned int
   - Substitution threshold of tailored edit distance-based clustering 
-- **`<tau_del>`** (unsigned int)
+- **`<tau_del>`** 
+  - unsigned int
   - Deletion threshold of tailored edit distance-based clustering 
-- **`<tau_ins>`** (unsigned int)
+- **`<tau_ins>`** 
+  - unsigned int
   - Insertion threshold of tailored edit distance-based clustering 
-- **`<len_min>`** (unsigned int)
+- **`<len_min>`** 
+  - unsigned int
   - Minimum length of AL reads 
-- **`<len_max>`** (unsigned int)
+- **`<len_max>`** 
+  - unsigned int
   - Maximum length of AL reads 
 
 #### Random sampling and merging
