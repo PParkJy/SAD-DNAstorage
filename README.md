@@ -106,7 +106,6 @@ Then, you can use our proposed method by `bash prop.sh` with the below options.
 This method should be used after `bash erlich.sh <seed_num> <sample_num> <trial_num> 1 <len_org>`   
 `bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_sub> <tau_del> <tau_ins> <tau_adj> <len_org> <len_min> <len_max>`  
 
-The summation of `<tau_sub>`, `<tau_del>`, and `<tau_ins>` should be less than `<tau_adj>`.   
 If you want to only set the edit distance threshold `<tau_adj>` without considering the each error threshold, you can run `prop.sh` with the below options. (default option)  
 `bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> 0 0 0 <tau_adj> <len_org> <len_min> <len_max>`  
 
