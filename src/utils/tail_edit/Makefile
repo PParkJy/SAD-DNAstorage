@@ -1,6 +1,6 @@
 SRC_DIR= src
 INC_DIR= src
-OBJECT_FILES= trie.o tail.o
+OBJECT_FILES= tail_trie.o tail.o
 SOURCE_FILES= main-tail.c
 
 OBJECTS= $(addprefix $(SRC_DIR)/,$(OBJECT_FILES))

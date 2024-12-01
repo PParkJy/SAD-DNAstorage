@@ -8,7 +8,7 @@
 #include <execinfo.h>
 #include <signal.h>
 #include <unistd.h>
-#include "starcode.h"
+#include "tail.h"
 #include "view.h"
 
 void SIGSEGV_handler(int sig) {
