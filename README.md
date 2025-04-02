@@ -11,7 +11,7 @@ We use pass filter (PF) reads and non-pass filter (NPF) reads of Illumina NGS se
 NPF reads are not provided as FASTQ files in Illumina NGS sequencing.  
 Therefore, we obtained raw sequencing data from Illumina sequencer and performed base-calling on NPF reads from the raw data.  
 
-The detailed Illumina sequencing settings are described in [supplementary.docx](https://github.com/PParkJy/SAD-DNAstorage/blob/main/supplementary.docx) and the sequencing cycle is 151-6-151 (R1-index-R2).   
+The detailed Illumina sequencing settings are described in [Supplementary.docx](https://github.com/PParkJy/SAD-DNAstorage/blob/main/Supplementary.docx) and the sequencing cycle is 151-6-151 (R1-index-R2).   
 Based on MiSeq [configurations](https://support.illumina.com/downloads/miseq-product-documentation.html), we obtained the following raw sequencing data: cif, filter, and locs files.    
 
 ### Raw data (binary file)  
