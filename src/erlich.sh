@@ -42,4 +42,4 @@ fi
 
 python ./utils/filter_cluster.py ${seed_num} ${sample_num} ${trial_num} ${use_NPF} ${len_org}
 python ./utils/RS_detect.py ${seed_num} ${sample_num} ${trial_num} ${use_NPF} ${len_org}
-matlab -nodisplay -nosplash -nodesktop -r "cd('./utils/'); LT_decode(${seed_num},${sample_num},${trial_num},${use_NPF});exit;" | tail -n +11
+~/matlab -nodisplay -nosplash -nodesktop -r "cd('./utils/'); LT_decode(${seed_num},${sample_num},${trial_num},${use_NPF});exit;" | tail -n +11
