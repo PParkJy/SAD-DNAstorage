@@ -3,6 +3,8 @@ This repository is for the study **"Sequence analysis and decoding with extra lo
 Here, we provide the source code and sequencing data.  
 (Version updated: April 2, 2025.)  
 
+</br>
+
 ## Dataset
 We use pass filter (PF) reads and non-pass filter (NPF) reads of Illumina NGS sequencing.  
 - PF: pass the chastity filter with an identified index pattern  
@@ -14,12 +16,16 @@ Therefore, we obtained raw sequencing data from Illumina sequencer and performed
 The detailed Illumina sequencing settings are described in [Supplementary.docx](https://github.com/PParkJy/SAD-DNAstorage/blob/main/Supplementary.docx) and the sequencing cycle is 151-6-151 (R1-index-R2).   
 Based on MiSeq [configurations](https://support.illumina.com/downloads/miseq-product-documentation.html), we obtained the following raw sequencing data: cif, filter, and locs files.    
 
+</br>
+
 ### Raw data (binary file)  
 - *.cif (./dataset/raw/cif/): contains RTA image analysis results for one cycle and one tile.
 - *.filter (./dataset/raw/filter/): contains chastity filter results for one tile.
 - *.locs (./dataset/raw/locs/): contains cluster coordinates for one file.   
 
   ![raw_format](./img/raw_format.png)
+
+</br>
 
 ### FASTQ 
 We conducted base-calling to generate FASTQ files from cif data using [AYB](https://github.com/timmassingham/AYB2/) with default options.   
@@ -32,7 +38,9 @@ The detailed method is described in README of "./dataset/".
 We also provide the testset (FASTQ including PF and NPF reads) to use our method.  
 - testset (./dataset/)
 
-## Sequence analysis and decoding (updates in progress)
+</br>
+
+## Sequence analysis and decoding
 ### Environments
 #### Languages
 - Python (3.7+)
@@ -41,13 +49,19 @@ We also provide the testset (FASTQ including PF and NPF reads) to use our method
   - The default path is set to `~/`.
 - C (gcc 7.5.0+)
 
+</br>
+
 #### Open-source Software
 - Edit distance based-clustering **[Starcode](https://github.com/gui11aume/starcode)** (to be located in ./src/utils/starcode/)
 - Sequence alignment **[MUSCLE](https://github.com/rcedgar/muscle)** (version 5.0.1428) (to be located in ./src/utils/MUSCLE/)
 - Paired-end read merging **[PEAR](https://github.com/tseemann/PEAR)** (version 0.9.11) (to be located in ./src/utils/PEAR/)
 
+</br>
+
 ### Run (./src/)
 *All binary files require the execute permisson (+x)*  
+
+</br>
 
 #### Options
 - **`<seed_num>`** 
@@ -94,22 +108,33 @@ We also provide the testset (FASTQ including PF and NPF reads) to use our method
   - unsigned int
   - Maximum length of AL reads 
 
+</br>
+
 #### Random sampling and merging
 `bash sampling.sh <seed_num> <sample_num> <trial_num> <r1_filename> <r2_filename>`
 
+</br>
+
 #### Sequence analysis and decoding
 *This process should be carried out after the "Random sampling and merging" process above.*  
+</br>
 
-First, we implemented the [Erlich](https://github.com/TeamErlich/dna-fountain)'s method.  
+##### Erlich's method (Erlich-PF and Erlich-ExtraNPF) 
+This is based on [Erlich](https://github.com/TeamErlich/dna-fountain).    
 You can use it by `bash erlich.sh` with the following options.  
-`bash erlich.sh <seed_num> <sample_num> <trial_num> <use_NPF> <len_org>`
+`bash erlich.sh <seed_num> <sample_num> <trial_num> <use_NPF> <len_org>`  
 
-Then, you can use our proposed method by `bash prop.sh` with the below options.   
-This method should be used after `bash erlich.sh <seed_num> <sample_num> <trial_num> 1 <len_org>`   
+</br>
+
+##### Our method (Prop-ExtraNPF)
+Our proposed method is executed by `bash prop.sh` with the below options.   
+`bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> 0 0 0 <tau_adj> <len_org> <len_min> <len_max>`  
+This method should be used after running Erlich-ExtraNPF, as it serves as a post-processing step to Erlich's method.  
+
+If you want to set the sub/del/ins threshold, you can run `prop.sh` with the below options.  
 `bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_sub> <tau_del> <tau_ins> <tau_adj> <len_org> <len_min> <len_max>`  
 
-If you want to only set the edit distance threshold `<tau_adj>` without considering the each error threshold, you can run `prop.sh` with the below options. (default option)  
-`bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> 0 0 0 <tau_adj> <len_org> <len_min> <len_max>`  
+</br>
 
 ## Contact
 E-mail: wldus8677@gmail.com  
