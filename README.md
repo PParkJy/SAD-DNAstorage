@@ -132,7 +132,7 @@ Our proposed method is executed by `bash prop.sh` with the below options.
 This method should be used after running Erlich-ExtraNPF, as it serves as a post-processing step to Erlich's method.  
 
 If you want to set the sub/del/ins threshold, you can run `prop.sh` with the below options.  
-`bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_sub> <tau_del> <tau_ins> <tau_adj> <len_org> <len_min> <len_max>`  
+`bash prop.sh <seed_num> <sample_num> <trial_num> <use_NPF> <tau_e> <tau_sub> <tau_del> <tau_ins> 0 <len_org> <len_min> <len_max>`  
 
 </br>
 
