@@ -74,7 +74,7 @@ python ./utils/consensus.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${ta
 
 # Stage 3 ===========================================================================================
 python ./utils/al_filter.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} ${len_org} ${len_min} ${len_max}
-./utils/tail_edit/tailored_clustering -b ${bias} -l ${len_org} -t 30 -x ${tau_sub} -y ${tau_del} -z ${tau_ins} -d ${tau_adj} -j --seq-id -i ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/RS_check/RSfail_withAL_${trial_num}.fasta -o ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/clustered.txt
+./utils/tail_edit/tailored_clustering -k ${bias} -l ${len_org} -t 30 -x ${tau_sub} -y ${tau_del} -z ${tau_ins} -d ${tau_adj} -j --seq-id -i ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/RS_check/RSfail_withAL_${trial_num}.fasta -o ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/clustered.txt
 python ./utils/post_clustering.py ${seed_num} ${sample_num} ${trial_num} ${tau_e} ${tau_adj} 3
 for eachfile in `find ../result/${seed_num}/${sample_num}/extraNPF/prop/${trial_num}/edit${tau_e}/edit${tau_adj}/cluster/ -maxdepth 1 -name '*.fasta'`
 do
