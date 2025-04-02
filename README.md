@@ -1,7 +1,7 @@
 # Sequence analysis and decoding with extra low-quality reads for DNA data storage
 This repository is for the study **"Sequence analysis and decoding with extra low-quality reads for DNA data storage"** which submitted to **_Bioinformatics_** in 2024.  
 Here, we provide the source code and sequencing data.  
-(Current version was revised in Nov. 5, 2024)  
+(Current version was revised in Apr. 2, 2025)  
 
 ## Dataset
 We use pass filter (PF) reads and non-pass filter (NPF) reads of Illumina NGS sequencing.  
