@@ -37,6 +37,8 @@ We also provide the testset (FASTQ including PF and NPF reads) to use our method
 #### Languages
 - Python (3.7+)
 - Matlab (with Communications Toolbox)
+  - To perform decoding in MATLAB, you need to modify the MATLAB path according to your environment.
+  - The default path is set to `~/`.
 - C (gcc 7.5.0+)
 
 #### Open-source Software
