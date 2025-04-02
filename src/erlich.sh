@@ -1,6 +1,6 @@
 # Proposed
 # Author: Jiyeon Park
-# Current version: Nov 5, 2024
+# Current version: Apr. 2, 2025
 
 #!/usr/bin/bash
 
