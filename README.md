@@ -1,5 +1,5 @@
 # Sequence analysis and decoding with extra low-quality reads for DNA data storage
-This repository is for the study **"Sequence analysis and decoding with extra low-quality reads for DNA data storage"** which accepted to **_Bioinformatics_** in 2025.  
+This repository is for the study **"Sequence analysis and decoding with extra low-quality reads for DNA data storage"** which published to **_Bioinformatics_** in 2025.  
 Here, we provide the source code and sequencing data.  
 (Version updated: June 11, 2025.)  
 
